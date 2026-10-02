@@ -6,8 +6,7 @@ st.set_page_config(page_title="PREDICTION OF REAL E-STATE PRICES", page_icon="ðŸ
 st.markdown("""
 <style>
 .stApp {
-background-color: linear-gradient(135deg, #F8F9FA, #FFF8E7;
-}
+background-color: #E8F5E9}
 </style>
 """, unsafe_allow_html=True)
 st.title("PREDICTION OF REAL E-STATE PRICES")
