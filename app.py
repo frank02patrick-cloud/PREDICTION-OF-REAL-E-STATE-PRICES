@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-st.set_page_config(page_title="PREDICTION OF REAL E-STATE PRICES", page_icon="🏠")
+st.set_page_config(page_title="PREDICTION OF REAL E-STATE PRICES", page_icon="🏠", layout="wide")
 st.title("PREDICTION OF REAL E-STATE PRICES")
 st.write("Enter the house characteristics to estimate the sale price in million RWF.")
 
