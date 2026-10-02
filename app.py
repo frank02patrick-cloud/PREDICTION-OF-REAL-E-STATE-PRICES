@@ -6,7 +6,7 @@ st.set_page_config(page_title="PREDICTION OF REAL E-STATE PRICES", page_icon="ðŸ
 st.markdown("""
 <style>
 .stApp {
-background-color: #F5F7FA;
+background-color: #0E1117;
 }
 </style>
 """, unsafe_allow_html=True)
