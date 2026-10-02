@@ -3,7 +3,13 @@ import pandas as pd
 import joblib
 
 st.set_page_config(page_title="PREDICTION OF REAL E-STATE PRICES", page_icon="🏠", layout="wide",)
-st.markdown(background-color: grey)
+st.markdown("""
+<style>
+.stApp {
+background-color: #F5F7FA;
+}
+</style>
+""", unsafe_allow_html=True)
 st.title("PREDICTION OF REAL E-STATE PRICES")
 st.write("Enter the house characteristics to estimate the sale price in million RWF.")
 
