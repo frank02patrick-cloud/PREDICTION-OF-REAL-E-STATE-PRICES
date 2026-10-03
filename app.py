@@ -9,7 +9,7 @@ st.set_page_config(page_title="PREDICTION OF REAL E-STATE PRICES", page_icon="ðŸ
         "secondaryBackgroundColor": "#E8E8E8",
         "textColor": "#262730",
         "font": "sans serif"
-    )
+    })
 st.title("PREDICTION OF REAL E-STATE PRICES")
 st.write("Enter the house characteristics to estimate the sale price in million RWF.")
 
