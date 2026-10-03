@@ -8,12 +8,12 @@ st.markdown("""
 
 /* Main application background */
 .stApp {
-    background-color: #F5F5F5;
+    background-color: #0E1117;
 }
 
 /* Title */
 .main-title {
-    background-color: white;
+    background-color: #0E1117;
     padding: 20px;
     border-radius: 12px;
     text-align: center;
@@ -28,14 +28,14 @@ st.markdown("""
 }
 
 .main-title p {
-    color: #555555;
+    color: #2E8B57;
     font-size: 17px;
 }
 
 /* Input boxes */
 div[data-testid="stNumberInput"],
 div[data-testid="stSelectbox"] {
-    background-color: white;
+    background-color: grey;
     padding: 10px;
     border-radius: 10px;
 }
@@ -44,7 +44,7 @@ div[data-testid="stSelectbox"] {
 .stButton > button {
     width: 100%;
     background-color: #FF6B6B;
-    color: white;
+    color: green;
     font-size: 18px;
     font-weight: bold;
     padding: 10px;
@@ -54,8 +54,8 @@ div[data-testid="stSelectbox"] {
 
 /* Button hover */
 .stButton > button:hover {
-    background-color: #E55555;
-    color: white;
+    background-color: #1E88E5;
+    color: green;
 }
 
 </style>
