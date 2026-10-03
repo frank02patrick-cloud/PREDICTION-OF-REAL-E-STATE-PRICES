@@ -1,6 +1,6 @@
 # House Price Predictor
 ## Project purpose
-Predict house prices in Rwanda using multiple linear regression.
+Predict real estates prices especially houses in Rwanda using multiple linear regression.
 ## Dataset
 Target: `House_Price_Million_RWF`. `House_ID` is excluded from predictors.
 ## Model
