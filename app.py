@@ -2,7 +2,14 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-st.set_page_config(page_title="PREDICTION OF REAL E-STATE PRICES", page_icon="🏠")
+st.set_page_config(page_title="PREDICTION OF REAL E-STATE PRICES", page_icon="🏠",  initial_sidebar_state="expanded",
+    theme={
+        "primaryColor": "#FF6B6B",
+        "backgroundColor": "#F5F5F5",
+        "secondaryBackgroundColor": "#E8E8E8",
+        "textColor": "#262730",
+        "font": "sans serif"
+    )
 st.title("PREDICTION OF REAL E-STATE PRICES")
 st.write("Enter the house characteristics to estimate the sale price in million RWF.")
 
