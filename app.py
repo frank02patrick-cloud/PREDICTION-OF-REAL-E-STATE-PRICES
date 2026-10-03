@@ -17,6 +17,7 @@ st.markdown("""
     padding: 20px;
     border-radius: 12px;
     text-align: center;
+    font-family: "Trebuchet MS", sans-serif;
     margin-bottom: 20px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
 }
@@ -64,7 +65,8 @@ div[data-testid="stSelectbox"] {
 st.markdown("""
 <div class="main-title">
     <h1>🏠 PREDICTION OF REAL E-STATE PRICES</h1>
-    <p>Enter the real e-state characteristics to predict the price in million RWF.</p>
+    <p>Enter the real e-state characteristics to predict the price in million RWF.
+    </p>
 </div>
 """, unsafe_allow_html=True)
 
