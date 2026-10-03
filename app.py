@@ -2,16 +2,72 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-st.set_page_config(page_title="PREDICTION OF REAL E-STATE PRICES", page_icon="🏠",  initial_sidebar_state="expanded",
-    theme={
-        "primaryColor": "#FF6B6B",
-        "backgroundColor": "#F5F5F5",
-        "secondaryBackgroundColor": "#E8E8E8",
-        "textColor": "#262730",
-        "font": "sans serif"
-    })
+st.set_page_config(page_title="PREDICTION OF REAL E-STATE PRICES", page_icon="🏠",  initial_sidebar_state="expanded")
+st.markdown("""
+<style>
+
+/* Main application background */
+.stApp {
+    background-color: #F5F5F5;
+}
+
+/* Title */
+.main-title {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.main-title h1 {
+    color: #FF6B6B;
+    font-size: 38px;
+    margin-bottom: 5px;
+}
+
+.main-title p {
+    color: #555555;
+    font-size: 17px;
+}
+
+/* Input boxes */
+div[data-testid="stNumberInput"],
+div[data-testid="stSelectbox"] {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Predict button */
+.stButton > button {
+    width: 100%;
+    background-color: #FF6B6B;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* Button hover */
+.stButton > button:hover {
+    background-color: #E55555;
+    color: white;
+}
+
+</style>
+""", unsafe_allow_html=True)
+st.markdown("""
+<div class="main-title">
+    <h1>🏠 PREDICTION OF REAL E-STATE PRICES</h1>
+    <p>Enter the house characteristics to estimate the sale price in million RWF.</p>
+</div>
+""", unsafe_allow_html=True)
 st.title("PREDICTION OF REAL E-STATE PRICES")
-st.write("Enter the house characteristics to estimate the sale price in million RWF.")
+st.write("Enter the real e-state characteristics to predict the price in million RWF.")
 
 @st.cache_resource
 def load_model():
@@ -27,8 +83,12 @@ age=st.number_input("House Age (years)", 0.4, 49.5, 6.8)
 parking=st.number_input("Parking Spaces", 0, 3, 1, step=1)
 
 if st.button("Predict"):
-    row=pd.DataFrame([{"Area_m2":area,"Bedrooms":bedrooms,"Bathrooms":bathrooms,
-    "House_Age_Years":age,"Distance_to_City_km":distance,
-    "Parking_Spaces":parking,"Neighborhood":neighborhood}])
+    row=pd.DataFrame([{"Area_m2":area,
+                       "Bedrooms":bedrooms,
+                       "Bathrooms":bathrooms,
+                       "House_Age_Years":age,
+                       "Distance_to_City_km":distance,
+                       "Parking_Spaces":parking,
+                       "Neighborhood":neighborhood}])
     price=model.predict(row)[0]
     st.success(f"Predicted house price: {price:.2f} million RWF")
