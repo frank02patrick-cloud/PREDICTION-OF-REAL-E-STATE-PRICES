@@ -60,8 +60,12 @@ div[data-testid="stSelectbox"] {
 
 </style>
 """, unsafe_allow_html=True)
-st.title("PREDICTION OF REAL E-STATE PRICES")
-st.write("Enter the real e-state characteristics to predict the price in million RWF.")
+st.markdown("""
+<div class="main-title">
+    <h1>🏠 PREDICTION OF REAL E-STATE PRICES</h1>
+    <p>Enter the real e-state characteristics to predict the price in million RWF.</p>
+</div>
+""", unsafe_allow_html=True)
 
 @st.cache_resource
 def load_model():
