@@ -5,8 +5,64 @@ import joblib
 st.set_page_config(page_title="PREDICTION OF REAL E-STATE PRICES", page_icon="🏠", layout="wide",)
 st.markdown("""
 <style>
+
 .stApp {
-background-color: #E8F5E9}
+    background-color: #F4F7FB;
+}
+
+/* Main title */
+.main-title {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.08);
+}
+
+.main-title h1 {
+    color: #1E3A8A;
+    font-size: 38px;
+    margin: 0;
+}
+
+.main-title p {
+    color: #555555;
+    font-size: 17px;
+    margin-top: 8px;
+}
+
+/* Input section */
+div[data-testid="stNumberInput"],
+div[data-testid="stSelectbox"] {
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Predict button */
+.stButton > button {
+    width: 100%;
+    background-color: #1E3A8A;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.stButton > button:hover {
+    background-color: #2563EB;
+    color: white;
+}
+
+/* Success prediction box */
+div[data-testid="stAlert"] {
+    border-radius: 10px;
+    font-size: 18px;
+}
+
 </style>
 """, unsafe_allow_html=True)
 st.title("PREDICTION OF REAL E-STATE PRICES")
