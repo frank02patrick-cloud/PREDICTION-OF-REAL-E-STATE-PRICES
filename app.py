@@ -44,9 +44,10 @@ div[data-testid="stSelectbox"] {
 .stButton > button {
     width: 100%;
     background-color: #FF6B6B;
-    color: green;
+    color: blue;
     font-size: 18px;
     font-weight: bold;
+    text-align: center;
     padding: 10px;
     border-radius: 10px;
     border: none;
